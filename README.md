@@ -76,6 +76,6 @@ não apenas os códigos que escrevi, mas a evolução do meu raciocínio
 como programador.
 
 ## Tecnologias
-Python
-Git
-GitHub
+ - Python
+ - Git
+ - GitHub
