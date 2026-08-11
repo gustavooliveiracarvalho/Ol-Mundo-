@@ -59,6 +59,7 @@ python/
 ├── desafios/
 ├── projetos/
 └── anotações/
+```
 
 ## Evolução
 
