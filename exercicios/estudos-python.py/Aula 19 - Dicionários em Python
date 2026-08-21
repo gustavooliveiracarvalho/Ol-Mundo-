@@ -1,0 +1,90 @@
+#Os dicionários organizam a forma como a informação aparece dentro da lista. Antes, em lista, os dados eram encontrados pelo indice: 0, 1, 2...
+#Dicionários são identificados 
+
+#print(filme.values()) = retorna todos os valores do dicionário
+#print(filme.keys()) = retorna todas as chaves do dicionário, que são os títulos/classes que dei para cada dado, por exemplo: "nome", "idade", "sexo"...
+#print(filme.items()) = retorna uma lista com tuplas contendo as chaves e os valores do dicionário que eu criar. É parecido com o "enumerate".
+
+#Exemplo de uso de items
+filme = {'titulo': 'Star Wars', 'ano': 1977, 'diretor': 'George Lucas'}
+for k, v in filme.items():
+    print(f'O {k} é {v}')
+
+#eu posso juntar listas, tuplas e dicionários.
+#Exemplo: crio o dicionário: {'titulo': 'Star Wars', 'ano': 1977, 'diretor': 'George Lucas'}
+#crio a lista: locadora = () e adiciono o dicionário
+#dessa forma crio uma lista que tem um dicionário dentro dela.
+
+#Exemplo de uso:
+print('-' * 30)
+filme = {'titulo': 'Star Wars', 'ano': 1977, 'diretor': 'George Lucas'}
+locadora = []
+locadora.append(filme)
+print(locadora[0]['ano'])
+print(locadora[0]['titulo'])
+
+#Mostra todos os dados do dicionário que eu criei
+print('-' * 30)
+pessoas = {'nome': 'Gustavo', 'sexo': 'M', 'idade': 22}
+print(pessoas)
+
+#Mostra apenas os dados que eu escolhi
+print('-' * 30)
+print(pessoas['nome'])
+print(pessoas['sexo'])
+print(pessoas['idade'])
+
+#Mostra dados no print formatado: sempre usar aspas duplas ""
+print('-' * 30)
+print(f'O {pessoas["nome"]} tem {pessoas["idade"]} anos.')
+
+#Mostrar só as chaves:
+print('-' * 30)
+print(pessoas.keys())
+
+#Mostrar só os items:
+print('-' * 30)
+print(pessoas.items())
+
+#Mostrar só os values:
+print('-' * 30)
+print(pessoas.values())
+
+#Mostrar usando "for":
+print('-' * 30)
+for k, v in pessoas.items():
+    print(f'{k} = {v}')
+
+#Apagando um dado:
+print('-' * 30)
+del pessoas['sexo']
+for k, v in pessoas.items():
+    print(f'{k} = {v}')
+
+#Mudando um dado dentro de uma key:
+print('-' * 30)
+pessoas['nome'] = 'Gabriela'
+for k, v in pessoas.items():
+    print(f'{k} = {v}')
+
+#Criando um dicionário dentro de uma lista:
+print('-' * 30)
+brasil = []
+estado1 = {'UF': 'Rio de Janeiro', 'sigla': 'RJ'}
+estado2 = {'UF': 'Goiás', 'sigla': 'GO'}
+brasil.append(estado1)
+brasil.append(estado2)
+print(brasil[0]['UF'])
+print(brasil[1]['UF'])
+
+#Criando dicionário com as entradas fornecidas pelo usuário:
+print('-' * 30)
+estado = {}
+brasil = []
+for c in range(0, 3):
+    estado['UF'] = str(input('Unidade Federativa: '))
+    estado['Sigla'] = str(input('Siglas: '))
+    brasil.append(estado.copy())
+for e in brasil:
+    for k, v in e.items():
+        print(f'O campo {k} tem valor {v}.')
